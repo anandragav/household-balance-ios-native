@@ -50,7 +50,7 @@ struct TodayView: View {
       }
       .navigationTitle(session.household.map { "Hi, \($0.me.short)" } ?? "Today")
       .toolbar {
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .navigationBarTrailing) {
           Button("Sign out") {
             Task { await session.signOut() }
           }
